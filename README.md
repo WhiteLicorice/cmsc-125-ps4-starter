@@ -84,8 +84,8 @@ assesses the joint analysis and the collaboration history.
 
 A fresh clone builds without warnings. It passes 8 of the 52 cases and exits
 1. The same run reports 0 of the 5 invariant checks passed. The 8 passing cases
-test refusals. They need no completed module. The stubs return failure as
-required.
+test refusals. They need no completed module. The stubs return an invalid
+version or leave the state unchanged.
 
 The other 44 cases need `src/server.c`, `src/client.c`, `src/policy.c`,
 `src/nfs.c`, and `src/afs.c`. The workflow in the Actions tab is red for the
