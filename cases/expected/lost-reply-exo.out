@@ -1,0 +1,10 @@
+send seq=1 op=add arg=7
+arrive seq=1 copy=1
+apply seq=1 arg=7 total=47 reply=47
+drop-reply seq=1
+retry seq=1 copy=2
+arrive seq=1 copy=2
+stored seq=1 reply=47 total=47
+deliver seq=1 value=47
+request seq=1 learned=47
+final applies=1 total=47 copies=2

@@ -1,0 +1,11 @@
+total 20
+policy exactly-once
+send 1 add 4
+arrive 1
+drop-reply 1
+send 2 add 6
+arrive 2
+deliver 2
+retry 1
+arrive 1
+deliver 1

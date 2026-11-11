@@ -1,0 +1,4 @@
+file server=1
+mkdir c1 name=docs result=created
+mkdir c1 name=docs result=exists
+final server=1

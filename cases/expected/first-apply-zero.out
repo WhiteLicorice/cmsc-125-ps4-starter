@@ -1,0 +1,6 @@
+send seq=1 op=set arg=25
+arrive seq=1 copy=1
+apply seq=1 arg=25 total=25 reply=25
+deliver seq=1 value=25
+request seq=1 learned=25
+final applies=1 total=25 copies=1

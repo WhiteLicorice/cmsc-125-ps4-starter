@@ -1,0 +1,9 @@
+total 100
+policy at-least-once
+send 1 add 10
+arrive 1
+deliver 1
+reset 50
+send 1 add 5
+arrive 1
+deliver 1

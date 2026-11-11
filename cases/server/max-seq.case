@@ -1,0 +1,5 @@
+total 0
+policy exactly-once
+send 8 add 1
+arrive 8
+deliver 8

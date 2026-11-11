@@ -1,0 +1,51 @@
+#include "ps4.h"
+
+int afs_open(struct ps4_file *file, int client)
+{
+    (void)file;
+    (void)client;
+    /* TODO: Refetch the whole file when the callback is broken. */
+    /* TODO: Return the cached file while the callback holds. */
+    return 0;
+}
+
+int afs_read(struct ps4_file *file, int client)
+{
+    (void)file;
+    (void)client;
+    /* TODO: Refetch the whole file when the callback is broken. */
+    /* TODO: Serve the cached file while the callback holds. */
+    return 0;
+}
+
+void afs_write(struct ps4_file *file, int client, int version)
+{
+    (void)file;
+    (void)client;
+    (void)version;
+    /* TODO: Change only the client's local copy. */
+}
+
+int afs_close(struct ps4_file *file, int client)
+{
+    (void)file;
+    (void)client;
+    /* TODO: Store a changed file on the server at the close. */
+    /* TODO: Break every other client's callback after the store. */
+    return 0;
+}
+
+int afs_mkdir(struct ps4_file *file, int client, const char *name)
+{
+    (void)file;
+    (void)client;
+    (void)name;
+    /* TODO: Answer the same way the NFS model does. */
+    return 0;
+}
+
+void afs_crash(struct ps4_file *file)
+{
+    (void)file;
+    /* TODO: Break every cached copy when the callbacks are lost. */
+}

@@ -1,0 +1,7 @@
+total 50
+policy at-most-once
+send 1 add 10
+lost 1
+retry 1
+arrive 1
+deliver 1

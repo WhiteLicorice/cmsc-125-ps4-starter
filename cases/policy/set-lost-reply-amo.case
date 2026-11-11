@@ -1,0 +1,8 @@
+total 100
+policy at-most-once
+send 1 set 10
+arrive 1
+drop-reply 1
+retry 1
+arrive 1
+give-up 1

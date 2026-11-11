@@ -1,0 +1,8 @@
+model afs
+file start 1
+open c1
+open c2
+write c1 2
+write c2 3
+close c1
+close c2

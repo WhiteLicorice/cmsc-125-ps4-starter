@@ -1,0 +1,4 @@
+model nfs
+file start 1
+mkdir c1 docs
+mkdir c1 docs

@@ -1,0 +1,3 @@
+model nfs
+file start 1
+write c1 0

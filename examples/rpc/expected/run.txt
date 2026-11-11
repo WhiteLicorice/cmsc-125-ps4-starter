@@ -1,0 +1,12 @@
+schedule 1: total 100, add 10 at seq 1, reply to seq 1 lost
+at-most-once: applies 1, total 110, client unknown
+at-least-once: applies 2, total 120, client 120
+exactly-once: applies 1, total 110, client 110
+schedule 2: total 100, add 10 at seq 1, add 5 at seq 2, reply to seq 1 lost, retry seq 1 last
+at-most-once: applies 2, total 115, seq 1 unknown, seq 2 115
+at-least-once: applies 3, total 125, seq 1 125, seq 2 115
+exactly-once: applies 2, total 115, seq 1 110, seq 2 115
+schedule 3: total 50, add 10 at seq 1, request to seq 1 lost
+at-most-once: applies 1, total 60, client 60
+at-least-once: applies 1, total 60, client 60
+exactly-once: applies 1, total 60, client 60

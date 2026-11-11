@@ -1,0 +1,8 @@
+total 0
+policy at-least-once
+send 1 add 10
+arrive 1
+deliver 1
+send 2 set 7
+arrive 2
+deliver 2

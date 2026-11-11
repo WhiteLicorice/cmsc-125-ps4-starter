@@ -1,0 +1,6 @@
+model nfs
+file start 1
+open c1
+write c1 2
+crash
+open c2

@@ -1,0 +1,10 @@
+send seq=1 op=add arg=10
+arrive seq=1 copy=1
+apply seq=1 arg=10 total=110 reply=110
+deliver seq=1 value=110
+send seq=1 op=add arg=5
+arrive seq=1 copy=1
+apply seq=1 arg=5 total=55 reply=55
+deliver seq=1 value=55
+request seq=1 learned=55
+final applies=1 total=55 copies=1

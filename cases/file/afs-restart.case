@@ -1,0 +1,9 @@
+model afs
+file start 1
+open c1
+time 1
+crash
+open c2
+write c2 2
+close c2
+read c1

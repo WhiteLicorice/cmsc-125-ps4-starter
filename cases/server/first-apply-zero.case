@@ -1,0 +1,5 @@
+total 0
+policy at-most-once
+send 1 set 25
+arrive 1
+deliver 1

@@ -1,0 +1,9 @@
+total 0
+policy exactly-once
+send 1 add 1
+lost 1
+retry 1
+lost 1
+retry 1
+arrive 1
+deliver 1

@@ -1,0 +1,6 @@
+send seq=8 op=add arg=1
+arrive seq=8 copy=1
+apply seq=8 arg=1 total=1 reply=1
+deliver seq=8 value=1
+request seq=8 learned=1
+final applies=1 total=1 copies=1

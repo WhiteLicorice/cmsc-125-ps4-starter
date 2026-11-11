@@ -1,0 +1,10 @@
+send seq=1 op=add arg=7
+arrive seq=1 copy=1
+apply seq=1 arg=7 total=47 reply=47
+drop-reply seq=1
+retry seq=1 copy=2
+arrive seq=1 copy=2
+suppress seq=1 total=47
+give-up seq=1
+request seq=1 learned=unknown
+final applies=1 total=47 copies=2

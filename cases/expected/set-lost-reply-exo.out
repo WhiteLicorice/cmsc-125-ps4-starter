@@ -1,0 +1,10 @@
+send seq=1 op=set arg=10
+arrive seq=1 copy=1
+apply seq=1 arg=10 total=10 reply=10
+drop-reply seq=1
+retry seq=1 copy=2
+arrive seq=1 copy=2
+stored seq=1 reply=10 total=10
+deliver seq=1 value=10
+request seq=1 learned=10
+final applies=1 total=10 copies=2

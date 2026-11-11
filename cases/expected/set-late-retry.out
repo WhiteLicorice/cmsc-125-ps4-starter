@@ -1,0 +1,15 @@
+send seq=1 op=set arg=30
+arrive seq=1 copy=1
+apply seq=1 arg=30 total=30 reply=30
+drop-reply seq=1
+send seq=2 op=add arg=5
+arrive seq=2 copy=1
+apply seq=2 arg=5 total=35 reply=35
+deliver seq=2 value=35
+retry seq=1 copy=2
+arrive seq=1 copy=2
+apply seq=1 arg=30 total=30 reply=30
+deliver seq=1 value=30
+request seq=1 learned=30
+request seq=2 learned=35
+final applies=3 total=30 copies=3
