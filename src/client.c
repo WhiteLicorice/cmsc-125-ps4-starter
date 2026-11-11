@@ -11,16 +11,16 @@ int ps4_run(const struct ps4_schedule *schedule)
             /* TODO: Create the request with copy 1 and print the send line. */
             break;
         case PS4_EV_ARRIVE:
-            /* TODO: Print the arrival, ask the server, and print the decision. */
+            /* TODO: Check for an outstanding request, print the arrival, ask the server, and print the decision. */
             break;
         case PS4_EV_LOST:
             /* TODO: Print the lost line and leave the request outstanding. */
             break;
         case PS4_EV_RETRY:
-            /* TODO: Raise the copy count and print the retry line. */
+            /* TODO: Check for an outstanding request, raise the copy count, and print the retry line. */
             break;
         case PS4_EV_DELIVER:
-            /* TODO: Record the pending reply and print the deliver line. */
+            /* TODO: Check for a pending reply, record the pending reply, and print the deliver line. */
             break;
         case PS4_EV_DROP_REPLY:
             /* TODO: Clear the pending reply and print the drop-reply line. */
