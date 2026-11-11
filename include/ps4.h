@@ -119,7 +119,7 @@ struct ps4_file {
     struct ps4_cache cache[PS4_MAX_CLIENTS];
 };
 
-/* Given: the schedule parser and the output lines. */
+/* Given: the schedule parser, its name tables, and the output lines. */
 int ps4_parse(const char *path, struct ps4_schedule *out);
 void ps4_print_send(int seq, const char *op, int arg);
 void ps4_print_arrive(int seq, int copy);
@@ -141,6 +141,10 @@ void ps4_print_close(int client, int version);
 void ps4_print_mkdir(int client, const char *name, int exists);
 void ps4_print_crash(int disk);
 void ps4_print_file_final(int disk);
+int policy_parse(const char *name, enum ps4_policy *out);
+const char *policy_name(enum ps4_policy policy);
+int op_parse(const char *name, enum ps4_op *out);
+const char *op_name(enum ps4_op op);
 
 /* Yours: the run loop and the models. */
 int ps4_run(const struct ps4_schedule *schedule);
@@ -150,14 +154,9 @@ enum ps4_decision server_deliver(struct ps4_server *server,
                                  enum ps4_policy policy, int seq,
                                  enum ps4_op op, int arg, long *reply);
 
-int policy_parse(const char *name, enum ps4_policy *out);
-const char *policy_name(enum ps4_policy policy);
 enum ps4_repeat policy_repeat(enum ps4_policy policy);
-int op_parse(const char *name, enum ps4_op *out);
-const char *op_name(enum ps4_op op);
 long op_apply(enum ps4_op op, long total, int arg);
 
-void nfs_reset(struct ps4_file *file, int version);
 int nfs_open(struct ps4_file *file, int client);
 int nfs_read(struct ps4_file *file, int client);
 void nfs_write(struct ps4_file *file, int client, int version);
@@ -165,7 +164,6 @@ int nfs_close(struct ps4_file *file, int client);
 int nfs_mkdir(struct ps4_file *file, int client, const char *name);
 void nfs_crash(struct ps4_file *file);
 
-void afs_reset(struct ps4_file *file, int version);
 int afs_open(struct ps4_file *file, int client);
 int afs_read(struct ps4_file *file, int client);
 void afs_write(struct ps4_file *file, int client, int version);
