@@ -3,6 +3,7 @@
 enum ps4_repeat policy_repeat(enum ps4_policy policy)
 {
     (void)policy;
+    /* See "The Delivery Policies". */
     /* TODO: Return suppression for at-most-once. */
     /* TODO: Return application for at-least-once. */
     /* TODO: Return the retained reply for exactly-once. */
@@ -14,6 +15,7 @@ long op_apply(enum ps4_op op, long total, int arg)
     (void)op;
     (void)total;
     (void)arg;
+    /* See "The Delivery Policies". */
     /* TODO: Add the argument for an add operation. */
     /* TODO: Replace the total with the argument for a set operation. */
     return total;
