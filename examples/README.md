@@ -21,4 +21,4 @@ make clean
 the recorded output. `make clean` removes the build output. Read the
 `README.md` in the folder for the model and the schedules.
 
-Run these commands inside Ubuntu. The example needs a C compiler and `make`.
+Run these commands in a terminal. The example needs a C compiler and `make`.

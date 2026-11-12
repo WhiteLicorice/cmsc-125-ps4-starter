@@ -2,7 +2,7 @@
 # CMSC 125 Problem Set 4 Starter
 
 This C17 project is the starter for the CMSC 125 Problem Set 4 remote-call
-and remote-file models. A schedule file names a delivery policy and the
+and remote-file models. A schedule file sets a delivery policy and lists the
 messages that arrive, are lost, or are retried. The program prints a trace for
 each event. A second model compares two remote file systems under a write and
 a later read.
@@ -70,7 +70,8 @@ make clean                # remove the build directory
 
 `check.sh` is the complete public automated check. No hidden suite exists. Read
 `tools/check_cases.py` before you trust a green run. The rubric separately
-assesses the joint analysis and the collaboration history.
+assesses Implementation Correctness, Structure and Contract, Joint Analysis, and
+Collaboration.
 
 ## Exit Codes
 
