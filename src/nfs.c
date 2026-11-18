@@ -29,7 +29,7 @@ void nfs_write(struct ps4_file *file, int client, int version)
     (void)version;
     /* See "The Remote File: NFSv2". */
     /* TODO: Store the new version in the client's cached copy. */
-    /* TODO: Hold the version until the close makes it durable. */
+    /* TODO: Hold the version in that client's cache record until its close. */
 }
 
 int nfs_close(struct ps4_file *file, int client)
@@ -37,7 +37,8 @@ int nfs_close(struct ps4_file *file, int client)
     (void)file;
     (void)client;
     /* See "The Remote File: NFSv2". */
-    /* TODO: Store a pending write on the server at the close. */
+    /* TODO: Store only this client's pending write on the server. */
+    /* TODO: Leave another client's pending write in its cache record. */
     /* TODO: Refresh the client's cached version and attributes. */
     return 0;
 }

@@ -108,11 +108,11 @@ struct ps4_cache {
     int version;
     int fetched;
     int valid;
+    int pending;
 };
 
 struct ps4_file {
     int disk;
-    int pending;
     int clock;
     int mkdir_made;
     char mkdir_name[PS4_NAME_MAX];

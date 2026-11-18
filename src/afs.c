@@ -27,6 +27,7 @@ void afs_write(struct ps4_file *file, int client, int version)
     (void)version;
     /* See "The Remote File: AFS". */
     /* TODO: Change only the client's local copy. */
+    /* TODO: Record the client's dirty version in its cache record. */
 }
 
 int afs_close(struct ps4_file *file, int client)
@@ -34,8 +35,9 @@ int afs_close(struct ps4_file *file, int client)
     (void)file;
     (void)client;
     /* See "The Remote File: AFS". */
-    /* TODO: Store a changed file on the server at the close. */
-    /* TODO: Break every other client's callback after the store. */
+    /* TODO: Store this client's dirty file on the server at the close. */
+    /* TODO: Leave the server untouched when the client has no dirty copy. */
+    /* TODO: Break every other client's callback after a store. */
     return 0;
 }
 

@@ -1,0 +1,8 @@
+model nfs
+file start 1
+open c1
+open c2
+write c1 2
+close c2
+open c3
+close c1
