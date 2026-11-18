@@ -1,0 +1,11 @@
+model nfs
+file start 1
+open c1
+time 3
+read c1
+open c2
+write c2 2
+close c2
+time 1
+read c1
+open c3
