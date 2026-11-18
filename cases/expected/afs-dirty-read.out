@@ -1,0 +1,11 @@
+file server=1
+open c1 version=1
+open c2 version=1
+write c1 version=2
+write c2 version=3
+close c1 version=2
+read c2 version=3
+close c2 version=3
+read c2 version=3
+open c3 version=3
+final server=3
