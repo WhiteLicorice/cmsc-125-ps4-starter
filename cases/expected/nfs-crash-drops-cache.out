@@ -1,0 +1,8 @@
+file server=1
+open c1 version=1
+write c1 version=2
+crash disk=1
+read c1 version=1
+close c1 version=1
+open c2 version=1
+final server=1
