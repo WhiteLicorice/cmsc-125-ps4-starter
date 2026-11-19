@@ -90,7 +90,7 @@ module. The partway failures pass because the unfinished `ps4_run` returns
 failure without printing. The stubs return an invalid version or leave the
 state unchanged.
 
-The other 49 cases need `src/server.c`, `src/client.c`, `src/policy.c`,
+The other 50 cases need `src/server.c`, `src/client.c`, `src/policy.c`,
 `src/nfs.c`, and `src/afs.c`. The workflow in the Actions tab is red for the
 same reason. That state is correct for a starter. Your fork passes after you
 implement the five files. A complete submission reports `58/58 cases passed`

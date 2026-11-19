@@ -8,4 +8,6 @@ write c2 2
 close c2
 time 1
 read c1
+time 4
+read c1
 open c3
