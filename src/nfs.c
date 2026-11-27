@@ -59,4 +59,5 @@ void nfs_crash(struct ps4_file *file)
     (void)file;
     /* See "The Remote File: NFSv2". */
     /* TODO: Drop a write that never became durable. */
+    /* TODO: Invalidate the cached version that write carried. */
 }

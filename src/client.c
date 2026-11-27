@@ -57,6 +57,6 @@ int ps4_run(const struct ps4_schedule *schedule)
             break;
         }
     }
-    /* TODO: Print one summary line per request and one final line. */
+    /* TODO: Print one summary line per request, then one final line. A file case prints only its final line. */
     return 1;
 }
