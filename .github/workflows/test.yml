@@ -3,8 +3,8 @@ on: [push]
 
 # This workflow is red before the work is done, and that is the correct
 # starting state. The starter ships five unimplemented modules, so it passes
-# 8 of the 58 published cases, reports 0 of 5 invariant checks, and exits 1.
-# The passing 8 are the refusal cases, which the failure stubs answer correctly.
+# 9 of the 59 published cases, reports 0 of 5 invariant checks, and exits 1.
+# The passing 9 are the refusal cases, which the failure stubs answer correctly.
 #
 # The workflow must be green on the commit you submit. That commit holds one
 # author's work and one partner's work, and the run belongs to both.
