@@ -6,6 +6,7 @@ int afs_open(struct ps4_file *file, int client)
     (void)client;
     /* See "The Remote File: AFS". */
     /* TODO: Refetch the whole file when the callback is broken. */
+    /* TODO: Keep a pending write across that refetch. */
     /* TODO: Return the cached file while the callback holds. */
     return 0;
 }
@@ -16,6 +17,7 @@ int afs_read(struct ps4_file *file, int client)
     (void)client;
     /* See "The Remote File: AFS". */
     /* TODO: Refetch the whole file when the callback is broken. */
+    /* TODO: Keep a pending write across that refetch. */
     /* TODO: Serve the cached file while the callback holds. */
     return 0;
 }
@@ -56,4 +58,5 @@ void afs_crash(struct ps4_file *file)
     (void)file;
     /* See "The Remote File: AFS". */
     /* TODO: Break every cached copy when the callbacks are lost. */
+    /* TODO: Clear each pending write on that crash. */
 }
