@@ -281,6 +281,8 @@ int ps4_parse(const char *path, struct ps4_schedule *out)
     int line_number = 0;
     int status;
     int i;
+    int dir_seen = 0;
+    char dir_name[PS4_NAME_MAX];
 
     memset(out, 0, sizeof *out);
     out->policy = PS4_AT_MOST_ONCE;
@@ -298,6 +300,16 @@ int ps4_parse(const char *path, struct ps4_schedule *out)
     if (out->has_model) {
         if (out->has_total || out->has_policy)
             return 1;
+        for (i = 0; i < out->count; i++) {
+            if (out->events[i].kind != PS4_EV_MKDIR)
+                continue;
+            if (!dir_seen) {
+                strcpy(dir_name, out->events[i].name);
+                dir_seen = 1;
+            } else if (strcmp(out->events[i].name, dir_name) != 0) {
+                return 1;
+            }
+        }
         for (i = 0; i < out->count; i++)
             if (out->events[i].kind < PS4_EV_FILE_START)
                 return 1;
