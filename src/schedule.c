@@ -150,6 +150,8 @@ static int read_line(FILE *input, struct ps4_schedule *out, int *line_number)
             return -1;
         if (parse_long(token[1], &out->total) != 0)
             return -1;
+        if (out->total < -1000000000L || out->total > 1000000000L)
+            return -1;
         out->has_total = 1;
         return 0;
     }
@@ -181,7 +183,9 @@ static int read_line(FILE *input, struct ps4_schedule *out, int *line_number)
             return -1;
         if (op_parse(token[2], &event->op) != 0)
             return -1;
-        return parse_int(token[3], &event->arg);
+        if (parse_int(token[3], &event->arg) != 0)
+            return -1;
+        return event->arg < -1000000000 || event->arg > 1000000000 ? -1 : 0;
     }
     if (strcmp(token[0], "arrive") == 0 || strcmp(token[0], "lost") == 0 ||
         strcmp(token[0], "retry") == 0 || strcmp(token[0], "deliver") == 0 ||
