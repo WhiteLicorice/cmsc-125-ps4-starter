@@ -83,7 +83,7 @@ Collaboration.
 
 ## The First Run
 
-A fresh clone builds without warnings. It passes 8 of the 58 cases and exits
+A fresh clone builds without warnings. It passes 10 of the 60 cases and exits
 1. The same run reports 0 of the 5 invariant checks passed. The 8 passing cases
 are five parse refusals and three partway failures. The parse refusals need no
 module. The partway failures pass because the unfinished `ps4_run` returns
@@ -93,7 +93,7 @@ state unchanged.
 The other 50 cases need `src/server.c`, `src/client.c`, `src/policy.c`,
 `src/nfs.c`, and `src/afs.c`. The workflow in the Actions tab is red for the
 same reason. That state is correct for a starter. Your fork passes after you
-implement the five files. A complete submission reports `58/58 cases passed`
+implement the five files. A complete submission reports `60/60 cases passed`
 and `5/5 invariant checks passed`, then exits 0.
 
 Enable workflows in the Actions tab after you fork the repository. GitHub
@@ -163,7 +163,7 @@ python3 --version
 
 ## The Corpus
 
-The 58 cases under `cases/` are the cases the instructor grades with. Each
+The 60 cases under `cases/` are the cases the instructor grades with. Each
 `.case` file holds one schedule. A valid case has an `.out` file with the exact
 expected output. A refused case also has `.err` and `.status` files.
 

@@ -1,0 +1,4 @@
+model nfs
+file start 1
+mkdir c1 alpha
+mkdir c2 beta
