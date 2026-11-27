@@ -171,7 +171,7 @@ The runner compares standard output, standard error, and the exit status of
 every case byte for byte. It stops a case after 15 seconds. A valid case
 requires exit code zero and empty standard error.
 
-The one case your pair writes lives under `student-cases/`. That folder holds a
+The one case your group writes lives under `student-cases/`. That folder holds a
 short README and an example in the same form. Run it with
 `./check.sh student-cases`.
 

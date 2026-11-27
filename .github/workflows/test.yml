@@ -7,8 +7,8 @@ on: [push]
 # cases are 11 parse refusals and 3 partway failures, which the failure stubs
 # answer correctly.
 #
-# The workflow must be green on the commit you submit. That commit holds one
-# author's work and one partner's work, and the run belongs to both.
+# The workflow must be green on the commit you submit. That commit holds
+# every group member's work, and the run belongs to the whole group.
 
 jobs:
   test:
