@@ -2,12 +2,13 @@ name: ps4-checks
 on: [push]
 
 # This workflow is red before the work is done, and that is the correct
-# starting state. The starter ships five unimplemented modules, so it passes
-# 10 of the 60 published cases, reports 0 of 5 invariant checks, and exits 1.
-# The passing 10 are the refusal cases, which the failure stubs answer correctly.
+# starting state. The starter ships five unimplemented modules, so it reports
+# `14/65 cases passed`, 0 of 5 invariant checks, and exits 1. The 14 passing
+# cases are 11 parse refusals and 3 partway failures, which the failure stubs
+# answer correctly.
 #
-# The workflow must be green on the commit you submit. That commit holds one
-# author's work and one partner's work, and the run belongs to both.
+# The workflow must be green on the commit you submit. That commit holds
+# every group member's work, and the run belongs to the whole group.
 
 jobs:
   test:
