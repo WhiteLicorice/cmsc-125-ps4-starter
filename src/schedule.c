@@ -313,6 +313,8 @@ int ps4_parse(const char *path, struct ps4_schedule *out)
         for (i = 0; i < out->count; i++)
             if (out->events[i].kind < PS4_EV_FILE_START)
                 return 1;
+        if (out->count == 0 || out->events[0].kind != PS4_EV_FILE_START)
+            return 1;
         return 0;
     }
     if (!out->has_total || !out->has_policy)
