@@ -142,7 +142,6 @@ void ps4_print_mkdir(int client, const char *name, int exists);
 void ps4_print_crash(int disk);
 void ps4_print_file_final(int disk);
 int policy_parse(const char *name, enum ps4_policy *out);
-const char *policy_name(enum ps4_policy policy);
 int op_parse(const char *name, enum ps4_op *out);
 const char *op_name(enum ps4_op op);
 
