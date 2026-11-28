@@ -1,8 +1,8 @@
 <!--no-pdf-->
 # Model Example
 
-This folder holds one worked example of the remote-call model. It is not
-graded. It is not part of the work you submit.
+This folder holds one worked example of the remote-call model. It isn't
+graded. It isn't part of the work you submit.
 
 | Folder | What it shows |
 |:--|:--|

@@ -30,10 +30,10 @@ You may change only these files and folders:
 - The Pair section of `README.md`
 - `student-cases/`, which holds the one case of your own
 
-Everything else is fixed. `include/ps4.h`, `src/main.c`, `src/schedule.c`, and
-`src/print.c` are given to you complete. `cases/`, the tools, and the workflow
-are the grading corpus and its runner. The manual states every rule these files
-follow.
+Everything else is fixed. The starter gives you `include/ps4.h`, `src/main.c`,
+`src/schedule.c`, and `src/print.c` complete. `cases/`, the tools, and the
+workflow are the grading corpus and its runner. The manual states every rule
+these files follow.
 
 ## Layout
 

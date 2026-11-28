@@ -6,8 +6,7 @@ check.sh text eol=lf
 
 # The checker compares every output line and every diagnostic byte for byte.
 # A CRLF checkout on Windows would make every expectation disagree with a
-# program that writes LF. The sources and build files stay LF too, so the
-# reference patches apply byte for byte on every host.
+# program that writes LF. The sources and build files stay LF too.
 *.c text eol=lf
 *.h text eol=lf
 Makefile text eol=lf

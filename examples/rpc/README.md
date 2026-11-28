@@ -9,7 +9,7 @@ Schedule 1 loses one reply and sends the retry. Schedule 2 sends request 2 befor
 
 The check saves the program's complete output to `actual.txt` and compares that file with the checked-in expected file. That file records the result of the stated model.
 
-These examples are not graded. They are not part of the work you submit. Use them to see the model before you write the code.
+This example isn't graded. It isn't part of the work you submit. Use it to see the model before you write the code.
 
 Run commands in this directory. On macOS, use a terminal. The Xcode command line tools carry the compiler and `make`. On Windows, use WSL2 Ubuntu. On Linux, use a terminal. You need a C compiler and `make`.
 

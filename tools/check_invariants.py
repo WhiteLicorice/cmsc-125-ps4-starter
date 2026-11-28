@@ -180,7 +180,7 @@ read c2
 
 CHECKS = [
     ("a lost request applies once under every policy", check_lost_request),
-    ("a lost reply keeps the two stock policies at one total",
+    ("a lost reply keeps at-most-once and exactly-once at one total",
      check_lost_reply),
     ("an idempotent retry leaves the total at its argument", check_set_retry),
     ("an NFS open ignores the attribute age", check_nfs_open),
