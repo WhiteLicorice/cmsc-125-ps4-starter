@@ -2,8 +2,8 @@
 # CMSC 125 Problem Set 4 Starter
 
 This C17 project is the starter for the CMSC 125 Problem Set 4 remote-call
-and remote-file models. A schedule file sets a delivery policy and lists the
-messages that arrive, are lost, or are retried. The program prints a trace for
+and remote-file models. A schedule file sets a delivery policy and lists every
+message arrival, message loss, and client retry. The program prints a trace for
 each event. A second model compares two remote file systems under a write and
 a later read.
 
@@ -78,8 +78,8 @@ Collaboration.
 | Code | Meaning |
 |---|---|
 | 0 | The case ran and every check in it passed. |
-| 1 | A case check failed, or the case content was refused. |
-| 2 | The command line or the case file path was refused. |
+| 1 | A case check failed, or the program refused the case content. |
+| 2 | The program refused the command line or the case file path. |
 
 ## The First Run
 
