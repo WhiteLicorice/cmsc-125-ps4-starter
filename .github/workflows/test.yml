@@ -3,7 +3,7 @@ on: [push]
 
 # This workflow is red before the work is done, and that is the correct
 # starting state. The starter ships five unimplemented modules, so it reports
-# `14/65 cases passed`, 0 of 5 invariant checks, and exits 1. The 14 passing
+# `14/67 cases passed`, 0 of 5 invariant checks, and exits 1. The 14 passing
 # cases are 11 parse refusals and 3 partway failures, which the failure stubs
 # answer correctly.
 #
