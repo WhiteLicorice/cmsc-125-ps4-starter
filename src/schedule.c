@@ -21,15 +21,6 @@ int policy_parse(const char *name, enum ps4_policy *out)
     return 0;
 }
 
-const char *policy_name(enum ps4_policy policy)
-{
-    if (policy == PS4_AT_MOST_ONCE)
-        return "at-most-once";
-    if (policy == PS4_AT_LEAST_ONCE)
-        return "at-least-once";
-    return "exactly-once";
-}
-
 int op_parse(const char *name, enum ps4_op *out)
 {
     if (strcmp(name, "add") == 0)
@@ -127,18 +118,25 @@ static int check_client(const char *text, int *out)
     return 0;
 }
 
-static int read_line(FILE *input, struct ps4_schedule *out, int *line_number)
+static int read_line(FILE *input, struct ps4_schedule *out)
 {
     char line[256];
     char *token[MAX_TOKENS];
+    char *comment;
     int tokens;
     struct ps4_event *event;
 
     if (fgets(line, sizeof line, input) == NULL)
         return 1;
-    (*line_number)++;
-    if (strchr(line, '#') != NULL)
-        *strchr(line, '#') = '\0';
+    comment = strchr(line, '#');
+    if (comment != NULL) {
+        if (strchr(comment, '\n') == NULL) {
+            int ch;
+            while ((ch = fgetc(input)) != EOF && ch != '\n')
+                ;
+        }
+        *comment = '\0';
+    }
     tokens = split(line, token, MAX_TOKENS);
     if (tokens < 0)
         return -1;
@@ -282,7 +280,6 @@ static int read_line(FILE *input, struct ps4_schedule *out, int *line_number)
 int ps4_parse(const char *path, struct ps4_schedule *out)
 {
     FILE *input;
-    int line_number = 0;
     int status;
     int i;
     int dir_seen = 0;
@@ -296,7 +293,7 @@ int ps4_parse(const char *path, struct ps4_schedule *out)
         perror("ps4: cannot open case");
         return 2;
     }
-    while ((status = read_line(input, out, &line_number)) == 0)
+    while ((status = read_line(input, out)) == 0)
         ;
     fclose(input);
     if (status != 1)
